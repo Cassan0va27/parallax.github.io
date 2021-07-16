@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Website Idea 1 || Vanilla Parallax</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"> Logo</a>
+      <ul>
+        <li><a href="#" class="active">HOME</a></li>
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">WORK</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="resources/stars.png" id="stars" />
+      <img src="resources/moon.png" id="moon" />
+      <img src="resources/mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">Moon Light</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="resources/mountains_front.png" id="mountains_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Effect</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam finibus
+        congue felis, at finibus urna euismod eu. Pellentesque euismod eget quam
+        vitae hendrerit. Suspendisse fermentum ex et tincidunt efficitur.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Sed luctus
+        pellentesque lacus, id gravida odio semper a. Nulla ac accumsan leo, nec
+        rhoncus turpis. Duis ante tortor, posuere at convallis id, ultricies eu
+        orci. Aenean a sodales lacus, at semper nunc. In accumsan libero quam,
+        non laoreet erat ultrices sit amet. Nunc ut nisl a velit pulvinar
+        faucibus in eu urna. Nunc non felis in tellus aliquam cursus eget
+        bibendum libero. Morbi ac ligula eget nunc molestie sodales pretium at
+        magna. Ut molestie feugiat ante id aliquam. Suspendisse at ipsum sit
+        amet felis aliquam ultricies. Integer vulputate dui ac neque auctor, et
+        consectetur elit cursus. Donec vitae orci non eros pellentesque
+        pulvinar.
+        <br></br>
+        Phasellus dignissim pulvinar venenatis. Curabitur malesuada rhoncus pharetra. Duis vel nunc ut justo fermentum varius non ornare velit. Phasellus in eros sed massa hendrerit dignissim. Sed justo massa, porttitor a tempor et, dignissim quis orci. Nullam eget vehicula neque. Vivamus interdum lorem sed quam luctus, a posuere erat interdum. In quis sem sit amet ligula euismod imperdiet non id risus. Curabitur luctus magna sed massa gravida, varius elementum velit imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vel fringilla sapien. Curabitur venenatis vel metus non auctor. Fusce vitae velit malesuada, iaculis odio nec, iaculis tortor.
+        <br></br>
+        Praesent et ipsum pretium, hendrerit orci id, semper velit. Cras ut mi vel massa imperdiet accumsan. Nunc fermentum orci sollicitudin sapien congue sodales. Cras tincidunt ligula vel felis imperdiet, et ullamcorper erat elementum. Pellentesque sagittis eros ac ipsum pharetra, a vehicula nulla mollis. Nullam ligula nulla, mattis in consequat malesuada, dignissim nec ipsum. Sed ultrices, nulla at fermentum tincidunt, ipsum neque euismod arcu, sollicitudin convallis nulla nunc quis ex. Etiam quis ultrices tortor. Sed tempor, nulla non suscipit malesuada, ex tellus pellentesque quam, accumsan ullamcorper est nisi eget turpis
+        Nunc ornare purus quis massa ullamcorper, sed viverra eros commodo. Sed imperdiet mauris et mauris vulputate volutpat eu non massa. Quisque molestie commodo tincidunt. Sed viverra risus ac felis viverra, ac volutpat ligula consequat. Proin a erat id turpis tincidunt dapibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Sed auctor eget risus a tincidunt. Donec egestas ultricies erat vel semper.
+        <br></br>
+        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat
+        <br></br>
+    </p>
+    </div>
+
+    <script>
+        let stars =  document.getElementById('stars');
+        let moon =  document.getElementById('moon');
+        let mountains_front =  document.getElementById('mountains_front');
+        let mountains_behind =  document.getElementById('mountains_behind');
+        let text = document.getElementById('text');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function() {
+            let value = window.scrollY;
+            stars.style.left = value * 0.25 + 'px';
+            moon.style.top = value * 1.05 + 'px';
+            mountains_behind.style.top = value * 0.5 + 'px';
+            mountains_front.style.top = value * 0 + 'px';
+            text.style.marginRight = value * 4 + 'px';
+            header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+  </body>
+</html>
